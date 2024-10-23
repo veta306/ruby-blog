@@ -5,11 +5,13 @@
 <h1>Posts</h1>
 
 <div id="posts">
-  <% @posts.each do |post| %>
+  <% @posts.each do |post|%>
+  <div class="post">
     <%= render post %>
     <p>
       <%= link_to "Show this post", post %>
     </p>
+  </div>
   <% end %>
 </div>
 
