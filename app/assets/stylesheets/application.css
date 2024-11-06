@@ -14,6 +14,19 @@
  *= require_self
  */
 
+.header{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authControl{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 #posts{
   display: flex;
   flex-direction: column;

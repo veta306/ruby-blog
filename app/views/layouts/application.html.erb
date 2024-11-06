@@ -19,6 +19,20 @@
   </head>
 
   <body>
+    <div class="header">
+      <%= link_to "Main", root_path %>
+      <div class="authControl"> 
+        <% if user_signed_in? %>
+          <div> Welcome <%= current_user.email %> </div>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Register", new_user_registration_path %>
+        <% end %>
+      </div>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
