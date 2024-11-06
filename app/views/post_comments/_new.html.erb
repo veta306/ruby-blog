@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <%= form_with model: [ post, Comment.new ] do |form| %>
+  <%= form_with model: [ post, PostComment.new ] do |form| %>
     Your comment:<br>
     <%= form.text_area :content, size: "20x5" %>
     <%= form.submit %>

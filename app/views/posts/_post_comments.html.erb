@@ -1,0 +1,23 @@
+<h2>Comments</h2>
+
+<% if @post_comment && @post_comment.errors.any? %>
+  <div style="color: red">
+    <h2><%= pluralize(@post_comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+    <ul>
+      <% @post_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div id="comments">
+  <%# Expands to render partial: "comments/comment", collection: post.comments %>
+  <% post.post_comments.each do |post_comment| %>
+  <% if post_comment.persisted? %>
+    <%= render post_comment %>
+  <% end %>
+<% end %>
+</div>
+
+<%= render "post_comments/new", post: post %>

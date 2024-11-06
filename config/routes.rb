@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
-    resources :comments
+    resources :post_comments
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

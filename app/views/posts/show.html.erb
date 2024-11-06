@@ -1,7 +1,7 @@
 <%= turbo_stream_from @post %>
 
 <%= render @post %>
-<%= render "posts/comments", post: @post %>
+<%= render "posts/post_comments", post: @post %>
 
 <% if user_signed_in? %>
   <div>
