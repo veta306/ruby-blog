@@ -60,3 +60,5 @@ gem "devise", "~> 4.9"
 
 gem "activeadmin"
 gem "sassc-rails"
+gem "telegram-bot-ruby"
+gem "figaro"
